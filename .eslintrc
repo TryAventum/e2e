@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true
+  },
+  "ignorePatterns": ["node_modules/"],
+  "plugins": ["prettier"],
+  "extends": ["standard", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "globals": {
+    "tinymce": true
+},
+  "rules": {
+    "no-console": "warn",
+    "no-eval": "error",
+    "import/first": "error",
+    "prettier/prettier": "error"
+  }
+}

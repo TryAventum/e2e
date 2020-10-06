@@ -1,0 +1,358 @@
+{
+  "title": "Schemas1",
+  "singularTitle": "Schema1",
+  "name": "schemas1",
+  "acl": {},
+  "icon": "<svg fill='currentColor' viewBox='0 0 20 20'><path d='M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z'></path></svg>",
+  "fields": [
+    {
+      "type": "string",
+      "name": "string",
+      "label": "String",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "string",
+      "name": "repString",
+      "label": "RepString",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "date",
+      "name": "date",
+      "label": "Date",
+      "format": "",
+      "calendarFormat": "",
+      "showMonthDropdown": false,
+      "showYearDropdown": false,
+      "dropdownMode": "",
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "date",
+      "name": "repDate",
+      "label": "RepDate",
+      "format": "",
+      "calendarFormat": "",
+      "showMonthDropdown": false,
+      "showYearDropdown": false,
+      "dropdownMode": "",
+      "required": true,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "time",
+      "name": "time",
+      "label": "Time",
+      "format": "",
+      "calendarFormat": "",
+      "timeIntervals": "15",
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "time",
+      "name": "repTime",
+      "label": "RepTime",
+      "format": "",
+      "calendarFormat": "",
+      "timeIntervals": "15",
+      "required": false,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "dateTime",
+      "name": "dateTime",
+      "label": "DateTime",
+      "format": "",
+      "calendarDateFormat": "",
+      "calendarTimeFormat": "",
+      "timeIntervals": "15",
+      "showMonthDropdown": false,
+      "showYearDropdown": false,
+      "dropdownMode": "",
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "dateTime",
+      "name": "repDateTime",
+      "label": "RepDatetime",
+      "format": "",
+      "calendarDateFormat": "",
+      "calendarTimeFormat": "",
+      "timeIntervals": "15",
+      "showMonthDropdown": false,
+      "showYearDropdown": false,
+      "dropdownMode": "",
+      "required": true,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false,
+        "actionType": "show",
+        "logicType": "all"
+      }
+    },
+    {
+      "type": "decimal",
+      "name": "decimal",
+      "label": "Decimal",
+      "required": true,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false,
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "operator": "<",
+            "value": "2020-03-19T20:00:00.000Z",
+            "logicType": "any"
+          },
+          {
+            "operator": "!=",
+            "value": "r",
+            "logicType": "any"
+          }
+        ]
+      }
+    },
+    {
+      "type": "decimal",
+      "name": "repDecimal",
+      "label": "RepDecimal",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "bigInteger",
+      "name": "bigInt",
+      "label": "BigInt",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false,
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "operator": "!=",
+            "value": ["5e62b67e56d0b36ae0d621be"],
+            "logicType": "any"
+          },
+          {
+            "operator": "=",
+            "value": "2020-03-04T21:03:33.000Z",
+            "logicType": "any"
+          }
+        ]
+      }
+    },
+    {
+      "type": "bigInteger",
+      "name": "repBigInt",
+      "label": "RepBigInt",
+      "required": true,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "boolean",
+      "name": "bool",
+      "label": "Bool",
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "relation",
+      "name": "relation",
+      "label": "Relation",
+      "reference": "Comments",
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "relation",
+      "name": "repRelation",
+      "label": "RepRelation",
+      "reference": "Comments",
+      "required": true,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "select",
+      "name": "select",
+      "label": "Select",
+      "options": [
+        {
+          "label": "White",
+          "value": "w"
+        },
+        {
+          "label": "Red",
+          "value": "r"
+        },
+        {
+          "label": "Black",
+          "value": "b"
+        }
+      ],
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "select",
+      "name": "repSelect",
+      "label": "RepSelect",
+      "options": [
+        {
+          "label": "One",
+          "value": "1"
+        },
+        {
+          "label": "Two",
+          "value": "2"
+        },
+        {
+          "label": "Three",
+          "value": "3"
+        }
+      ],
+      "required": true,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "upload",
+      "name": "file",
+      "label": "File",
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "upload",
+      "name": "files",
+      "label": "Files",
+      "required": false,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "textarea",
+      "name": "wysiwyg",
+      "label": "WYSIWYG",
+      "textareaType": "WYSIWYG",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "textarea",
+      "name": "repWysiwyg",
+      "label": "RepWYSIWYG",
+      "textareaType": "WYSIWYG",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "textarea",
+      "name": "repTextarea",
+      "label": "RepTextarea",
+      "textareaType": "Textarea",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "custom",
+      "name": "customs1",
+      "label": "Custom1",
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "custom",
+      "name": "customs2",
+      "label": "Custom2",
+      "required": true,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    }
+  ]
+}

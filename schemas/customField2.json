@@ -1,0 +1,329 @@
+{
+  "title": "Customs2",
+  "singularTitle": "Custom2",
+  "name": "customs2",
+  "fields": [
+    {
+      "type": "string",
+      "name": "string",
+      "label": "String",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "string",
+      "name": "repString",
+      "label": "RepString",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "date",
+      "name": "date",
+      "label": "Date",
+      "format": "",
+      "calendarFormat": "",
+      "showMonthDropdown": false,
+      "showYearDropdown": false,
+      "dropdownMode": "",
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": true,
+        "actionType": "Hide",
+        "logicType": "Any",
+        "rules": [
+          {
+            "field": "RepString",
+            "type": "input",
+            "operator": "contains",
+            "value": "66",
+            "logicType": "All"
+          }
+        ]
+      }
+    },
+    {
+      "type": "date",
+      "name": "repDate",
+      "label": "RepDate",
+      "format": "",
+      "calendarFormat": "",
+      "showMonthDropdown": false,
+      "showYearDropdown": false,
+      "dropdownMode": "",
+      "required": true,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "time",
+      "name": "time",
+      "label": "Time",
+      "format": "",
+      "calendarFormat": "",
+      "timeIntervals": "15",
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "time",
+      "name": "repTime",
+      "label": "RepTime",
+      "format": "",
+      "calendarFormat": "",
+      "timeIntervals": "15",
+      "required": false,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "dateTime",
+      "name": "dateTime",
+      "label": "DateTime",
+      "format": "",
+      "calendarDateFormat": "",
+      "calendarTimeFormat": "",
+      "timeIntervals": "15",
+      "showMonthDropdown": false,
+      "showYearDropdown": false,
+      "dropdownMode": "",
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "dateTime",
+      "name": "repDateTime",
+      "label": "RepDatetime",
+      "format": "",
+      "calendarDateFormat": "",
+      "calendarTimeFormat": "",
+      "timeIntervals": "15",
+      "showMonthDropdown": false,
+      "showYearDropdown": false,
+      "dropdownMode": "",
+      "required": true,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "decimal",
+      "name": "decimal",
+      "label": "Decimal",
+      "required": true,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "decimal",
+      "name": "repDecimal",
+      "label": "RepDecimal",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "bigInteger",
+      "name": "bigInt",
+      "label": "BigInt",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "bigInteger",
+      "name": "repBigInt",
+      "label": "RepBigInt",
+      "required": true,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "boolean",
+      "name": "bool",
+      "label": "Bool",
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "relation",
+      "name": "relation",
+      "label": "Relation",
+      "reference": "Comments",
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "relation",
+      "name": "repRelation",
+      "label": "RepRelation",
+      "reference": "Comments",
+      "required": true,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "select",
+      "name": "select",
+      "label": "Select",
+      "options": [
+        {
+          "label": "White",
+          "value": "w"
+        },
+        {
+          "label": "Red",
+          "value": "r"
+        },
+        {
+          "label": "Black",
+          "value": "b"
+        }
+      ],
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "select",
+      "name": "repSelect",
+      "label": "RepSelect",
+      "options": [
+        {
+          "label": "One",
+          "value": "1"
+        },
+        {
+          "label": "Two",
+          "value": "2"
+        },
+        {
+          "label": "Three",
+          "value": "3"
+        }
+      ],
+      "required": true,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "upload",
+      "name": "file",
+      "label": "File",
+      "required": false,
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "upload",
+      "name": "files",
+      "label": "Files",
+      "required": false,
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "textarea",
+      "name": "wysiwyg",
+      "label": "WYSIWYG",
+      "textareaType": "WYSIWYG",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "textarea",
+      "name": "repWysiwyg",
+      "label": "RepWYSIWYG",
+      "textareaType": "WYSIWYG",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "textarea",
+      "name": "textarea",
+      "label": "Textarea",
+      "textareaType": "Textarea",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": false,
+      "conditionalLogic": {
+        "enable": false
+      }
+    },
+    {
+      "type": "textarea",
+      "name": "repTextarea",
+      "label": "RepTextarea",
+      "required": false,
+      "pattern": "",
+      "patValMes": "",
+      "repeatable": true,
+      "conditionalLogic": {
+        "enable": false
+      }
+    }
+  ]
+}

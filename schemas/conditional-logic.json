@@ -1,0 +1,90 @@
+[
+  {
+    "name": "date",
+    "conditionalLogic": {
+      "enable": true,
+      "actionType": "Hide",
+      "logicType": "Any",
+      "rules": [
+        {
+          "field": "RepString",
+          "operator": "contains",
+          "value": "66",
+          "logicType": "All"
+        },
+        {
+          "field": "Select",
+          "operator": "contains",
+          "value": ["Red"]
+        }
+      ]
+    }
+  },
+  {
+    "name": "bigInt",
+    "conditionalLogic": {
+      "enable": true,
+      "actionType": "Hide",
+      "logicType": "Any",
+      "rules": [
+        {
+          "field": "RepSelect",
+          "operator": "contains",
+          "value": ["One", "Three"]
+        },
+        {
+          "field": "DateTime",
+          "operator": "is not",
+          "value": "June 9, 2020 5:45 PM"
+        },
+        {
+          "field": "Files",
+          "operator": "contains",
+          "value": ["ZzT_EcOTQ10.jpg", "2yvFooPiiCU.jpg"]
+        }
+      ]
+    }
+  },
+  {
+    "name": "decimal",
+    "conditionalLogic": {
+      "enable": true,
+      "actionType": "Show",
+      "logicType": "All",
+      "rules": [
+        {
+          "field": "RepRelation",
+          "operator": "does not contain",
+          "value": ["Test5", "Test3"]
+        }
+      ]
+    }
+  },
+  {
+    "name": "wysiwyg",
+    "conditionalLogic": {
+      "enable": true,
+      "actionType": "Hide",
+      "logicType": "All",
+      "rules": [
+        {
+          "field": "Bool",
+          "operator": "is not",
+          "value": false
+        },
+        {
+          "field": "RepDecimal",
+          "operator": "starts with",
+          "logicType": "Any",
+          "value": 5163.1155
+        },
+        {
+          "field": "RepTextarea",
+          "operator": "less than",
+          "logicType": "All",
+          "value": 7
+        }
+      ]
+    }
+  }
+]

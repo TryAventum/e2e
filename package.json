@@ -1,0 +1,33 @@
+{
+  "name": "aventum-e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:serially": "jest --runInBand",
+    "test:clear": "jest --clearCache"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.21.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.0.1",
+    "puppeteer": "^3.0.4"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.10.1",
+    "date-fns": "^2.14.0",
+    "dotenv-flow": "^3.2.0",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.15"
+  }
+}
