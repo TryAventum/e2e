@@ -24,3 +24,13 @@ docker build -t aventum-e2e .
 # Notice the IP 192.168.0.15, find your IP using ipconfig
 docker run --network=host -v /app/node_modules -v ${pwd}:/app -e 'DISPLAY=192.168.0.15:0' -it aventum-e2e
 ```
+
+## Docker Windows WSL2
+
+> Make sure [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/) up and running
+
+```
+docker build -t aventum-e2e .
+# Notice the IP 192.168.0.15, find your IP using ipconfig
+docker run --network=host -v /app/node_modules -v $PWD:/app -e 'DISPLAY=192.168.0.15:0' -it aventum-e2e
+```
