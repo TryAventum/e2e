@@ -14,3 +14,13 @@ Using [Puppeteer](https://github.com/puppeteer/puppeteer) & [Jest](https://jestj
 8. Create Schemas1 schema by running `npm run test:serially -- create.schemas1.schema.test.js`
 9. Create Schemas1 items by running `npm run test:serially -- create.schemas1.contents.test.js`
 10. Update Schemas1 items by running `npm run test:serially -- update.schemas1.contents.test.js`
+
+## Docker Windows PowerShell
+
+> Make sure [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/) up and running
+
+```
+docker build -t aventum-e2e .
+# Notice the IP 192.168.0.15, find your IP using ipconfig
+docker run --network=host -v /app/node_modules -v ${pwd}:/app -e 'DISPLAY=192.168.0.15:0' -it aventum-e2e
+```
