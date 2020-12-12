@@ -139,28 +139,19 @@ const selectContent = async ({
     await deselectAllHelper()
 
     const isNextBtnDisabled =
-      (await page.$(
-        '.modal-content .pagination-bottom .-next button[disabled]'
-      )) !== null
+      (await page.$('.modal-content .pagination button.next[disabled]')) !==
+      null
     if (!isNextBtnDisabled) {
       // We have a next page, navigate to it
-      await page.click('.modal-content .pagination-bottom .-next button')
+      await page.click('.modal-content .pagination button.next')
 
       // Wait for the contents to appear
-      await page.waitForSelector('.modal-content .contents .rt-tr-group')
+      await page.waitForSelector('.modal-content .contents .tr')
 
       await deselectAll()
     } else {
       // Navigate to page 1
-      const pageJumpInput = await page.$(
-        '.modal-content .pagination-bottom .-pageJump input'
-      )
-
-      await page.clearAndType({
-        inputSelector: pageJumpInput,
-        value: '1',
-        pressEnter: true,
-      })
+      await page.click('.modal-content .pagination button.firstItem')
     }
   }
   // Open the modal
@@ -172,7 +163,7 @@ const selectContent = async ({
   }
 
   // Wait for the contents to appear
-  await page.waitForSelector('.modal-content .contents .rt-tr-group')
+  await page.waitForSelector('.modal-content .contents .tr')
 
   await deselectAll()
 
@@ -183,7 +174,7 @@ const selectContent = async ({
   const selectValue = async () => {
     // Get all the values in the current page
     const tds = await page.$$eval(
-      '.modal-content .rt-tr-group>.rt-tr>.rt-td:nth-child(2)>div',
+      '.modal-content .tr>.td:nth-child(2)>div',
       (sel) => sel.map((o) => o.textContent)
     )
 
@@ -237,9 +228,9 @@ const selectContent = async ({
       (operator === 'random' && currentPage === 1 && field.repeatable)
     ) {
       // Navigate to a new page by clicking on the next button
-      await page.click('.modal-content .pagination-bottom .-next button')
+      await page.click('.modal-content .pagination button.next')
       // Wait for the contents to appear
-      await page.waitForSelector('.modal-content .contents .rt-tr-group')
+      await page.waitForSelector('.modal-content .contents .tr')
 
       currentPage++
 
