@@ -14,6 +14,7 @@ Using [Puppeteer](https://github.com/puppeteer/puppeteer) & [Jest](https://jestj
 8. Create Schemas1 schema by running `npm run test:serially -- create.schemas1.schema.test.js`
 9. Create Schemas1 items by running `npm run test:serially -- create.schemas1.contents.test.js`
 10. Update Schemas1 items by running `npm run test:serially -- update.schemas1.contents.test.js`
+11. Optional register users `npm run test:serially -- register.test.js`.
 
 ## Docker Windows PowerShell
 
